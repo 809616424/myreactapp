@@ -81,7 +81,7 @@ apply plugin:'com.moowork.node'
 project.webAppDirName = './'
  
 war{
-  exclude '**/*..gradle'
+  exclude 'E:\myapp\.gradle'
 }
 node {
   version='12.4.0'
