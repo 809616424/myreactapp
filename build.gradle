@@ -82,7 +82,7 @@ apply plugin:'com.moowork.node'
 project.webAppDirName = './'
  
 war{
-  exclude 'E:\myapp\.gradle'
+  exclude '**/.gradle'
 }
 node {
   version='12.4.0'
@@ -92,14 +92,14 @@ task bundle(type: NpmTask, dependsOn: npmInstall) {
 args = ['run','build']
 }
 
-assemble.dependsOn(bundle)
+//assemble.dependsOn(bundle)
 
-task test(type: NpmTask) {
-environment = ['CI': true]
-args = ['run','test']
-}
+// task test1(type: NpmTask) {
+// environment = ['CI': true]
+// args = ['run','test']
+// }
 task run(type: NpmTask) {
 args = ['start']
 }
-check.dependsOn(test)
+//check.dependsOn(test1)
 war.dependsOn(bundle)
