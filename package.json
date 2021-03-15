@@ -1,6 +1,7 @@
 {
   "name": "myapp",
   "version": "0.1.0",
+  "homepage": "https://localhost:8082/MYAPP",
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
